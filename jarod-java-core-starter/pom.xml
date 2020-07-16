@@ -8,21 +8,12 @@
         <version>1.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <packaging>pom</packaging>
 
-    <artifactId>jarod-bigdata-starter</artifactId>
-    <groupId>pri.jarod.bigdata</groupId>
-    <modules>
-        <module>jarod-flink-core</module>
-    </modules>
+    <artifactId>jarod-java-core-starter</artifactId>
+    <version>1.0.0</version>
+    <groupId>pri.jarod.java</groupId>
 
     <dependencies>
-
-        <!--Shiro核心框架 -->
-        <dependency>
-            <groupId>org.apache.shiro</groupId>
-            <artifactId>shiro-core</artifactId>
-        </dependency>
 
         <!-- 自定义验证注解 -->
         <dependency>
@@ -67,11 +58,11 @@
             <artifactId>snakeyaml</artifactId>
         </dependency>
 
-        <!-- servlet包 -->
         <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
         </dependency>
+
     </dependencies>
 
     <build>

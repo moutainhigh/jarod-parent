@@ -13,7 +13,9 @@
 
     <properties>
         <jarod.spring.boot.starter.version>1.0.0</jarod.spring.boot.starter.version>
-        <jarod-bigdata-starter.version>1.0.1</jarod-bigdata-starter.version>
+        <jarod-bigdata-starter.version>1.0.0</jarod-bigdata-starter.version>
+        <jarod-java-core-starter.version>1.0.0</jarod-java-core-starter.version>
+        <jarod-none-spring-core.version>1.0.0</jarod-none-spring-core.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>11</java.version>
@@ -33,12 +35,13 @@
         <arthas.version>3.3.6</arthas.version>
         <poi.version>4.1.2</poi.version>
         <fastjson.version>1.2.57</fastjson.version>
-        <guava.version>20.0</guava.version>
+        <guava.version>24.1.1</guava.version>
     </properties>
 
     <modules>
         <module>jarod-spring-boot-starter</module>
         <module>jarod-bigdata-starter</module>
+        <module>jarod-java-core-starter</module>
     </modules>
 
     <dependencies>
@@ -227,6 +230,17 @@
                 <groupId>pri.jarod.bigdata</groupId>
                 <artifactId>jarod-bigdata-starter</artifactId>
                 <version>${jarod-bigdata-starter.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>pri.jarod.java</groupId>
+                <artifactId>jarod-java-core-starter</artifactId>
+                <version>${jarod-java-core-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>pri.jarod.nonespring</groupId>
+                <artifactId>jarod-none-spring-core</artifactId>
+                <version>${jarod-none-spring-core.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

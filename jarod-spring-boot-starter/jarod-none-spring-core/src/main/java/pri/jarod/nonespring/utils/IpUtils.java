@@ -1,5 +1,7 @@
 package pri.jarod.nonespring.utils;
 
+import pri.jarod.java.utils.StringUtils;
+
 import javax.servlet.http.HttpServletRequest;
 import java.net.InetAddress;
 import java.net.UnknownHostException;

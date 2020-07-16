@@ -6,12 +6,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
-import pri.jarod.nonespring.core.entity.AjaxResult;
-import pri.jarod.nonespring.core.entity.AjaxResult.Type;
-import pri.jarod.nonespring.core.page.PageEntity;
-import pri.jarod.nonespring.utils.DateUtils;
-import pri.jarod.nonespring.utils.StringUtils;
-import pri.jarod.nonespring.utils.sql.SqlUtil;
+import pri.jarod.java.core.entity.AjaxResult;
+import pri.jarod.java.core.page.PageEntity;
+import pri.jarod.java.utils.DateUtils;
+import pri.jarod.java.utils.StringUtils;
+import pri.jarod.java.utils.sql.SqlUtil;
 import pri.jarod.spring.boot.core.ServletUtils;
 import pri.jarod.spring.boot.core.page.TableDataInfo;
 import pri.jarod.spring.boot.core.page.TableSupport;
@@ -153,7 +152,7 @@ public class BaseController {
     /**
      * 返回错误码消息
      */
-    public AjaxResult error(Type type, String message) {
+    public AjaxResult error(AjaxResult.Type type, String message) {
         return new AjaxResult(type, message);
     }
 

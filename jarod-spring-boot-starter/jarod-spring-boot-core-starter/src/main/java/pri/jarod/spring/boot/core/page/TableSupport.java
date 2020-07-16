@@ -1,21 +1,19 @@
 package pri.jarod.spring.boot.core.page;
 
-import pri.jarod.nonespring.constant.Constants;
-import pri.jarod.nonespring.core.page.PageEntity;
+import pri.jarod.java.constant.Constants;
+import pri.jarod.java.core.page.PageEntity;
 import pri.jarod.spring.boot.core.ServletUtils;
 
 /**
  * 表格数据处理
- * 
+ *
  * @author ruoyi
  */
-public class TableSupport
-{
+public class TableSupport {
     /**
      * 封装分页对象
      */
-    public static PageEntity getPageDomain()
-    {
+    public static PageEntity getPageDomain() {
         PageEntity pageEntity = new PageEntity();
         pageEntity.setPageNum(ServletUtils.getParameterToInt(Constants.PAGE_NUM));
         pageEntity.setPageSize(ServletUtils.getParameterToInt(Constants.PAGE_SIZE));
@@ -24,8 +22,7 @@ public class TableSupport
         return pageEntity;
     }
 
-    public static PageEntity buildPageRequest()
-    {
+    public static PageEntity buildPageRequest() {
         return getPageDomain();
     }
 }

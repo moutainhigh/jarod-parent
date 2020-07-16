@@ -3,8 +3,8 @@ package pri.jarod.spring.boot.core;
 import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
-import pri.jarod.nonespring.core.text.Convert;
-import pri.jarod.nonespring.utils.StringUtils;
+import pri.jarod.java.core.text.Convert;
+import pri.jarod.java.utils.StringUtils;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

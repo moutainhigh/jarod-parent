@@ -13,6 +13,7 @@
 
     <properties>
         <jarod.spring.boot.starter.version>1.0.0</jarod.spring.boot.starter.version>
+        <jarod-bigdata-starter.version>1.0.1</jarod-bigdata-starter.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>11</java.version>
@@ -223,9 +224,9 @@
             </dependency>
 
             <dependency>
-                <groupId>pri.jarod.parent</groupId>
+                <groupId>pri.jarod.bigdata</groupId>
                 <artifactId>jarod-bigdata-starter</artifactId>
-                <version>${jarod.spring.boot.starter.version}</version>
+                <version>${jarod-bigdata-starter.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

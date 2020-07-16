@@ -1,0 +1,5 @@
+# Auto Configure
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+pri.jarod.spring.boot.cache.autoconfigure.RedisCacheAutoConfiguration,\
+pri.jarod.spring.boot.cache.autoconfigure.EchacheCacheAutoConfiguration,\
+pri.jarod.spring.boot.cache.autoconfigure.MemoryCacheAutoConfiguration

@@ -1,0 +1,14 @@
+{
+  "version": 1.0,
+  "webhooks": [
+    {
+      "type": "wechat",
+      "url": "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=84fb08de-c26e-4143-8758-57a889ca9c49",
+      "uploadUrl": "https://qyapi.weixin.qq.com/cgi-bin/webhook/upload_media?key=84fb08de-c26e-4143-8758-57a889ca9c49&type=file"
+    },
+    {
+      "type": "dingding",
+      "url": ""
+    }
+  ]
+}

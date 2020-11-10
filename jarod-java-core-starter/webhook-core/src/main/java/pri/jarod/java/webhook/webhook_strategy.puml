@@ -1,0 +1,65 @@
+@startuml
+abstract class AbstractList{
+    +field1
+}
+abstract AbstractCollection
+interface List {
+   -field1
+}
+interface Collection
+
+List <|-- AbstractList
+Collection <|-- AbstractCollection
+
+Collection <|- List
+AbstractCollection <|- AbstractList
+AbstractList <|-- ArrayList
+
+class ArrayList {
+  Object[] elementData
+  size()
+}
+
+enum TimeUnit {
+  DAYS
+  HOURS
+  MINUTES
+}
+
+annotation SuppressWarnings
+
+
+
+' 继承
+Object <|-- ArrayList
+
+Object : equals()
+ArrayList : Object[] elementData
+ArrayList : size()
+
+
+class Dummy {
+ -field1
+ #field2
+ ~method1()
+ +method2()
+}
+
+'泛型
+class Foo<? extends Element> {
+  int size()
+}
+Foo *- Element
+
+' 实现
+interface List1{
+ void list()
+}
+class ArrayList1 implements List1{
+ #field1
+ void list()
+}
+class ArrayList1 extends AbstractList1{
+    #field1
+}
+@enduml

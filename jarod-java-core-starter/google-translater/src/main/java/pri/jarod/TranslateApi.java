@@ -37,4 +37,8 @@ public enum TranslateApi {
         public static final String ZH = "zh";
         public static final String EN = "en";
     }
+
+    public static void main(String[] args) throws Exception {
+        System.out.println(TranslateApi.INSTANCE.translateEnToZh("hint"));
+    }
 }

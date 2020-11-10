@@ -9,22 +9,20 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>pri.jarod</groupId>
-    <artifactId>google-translater</artifactId>
-    <version>1.0.1</version>
+    <artifactId>webhook-core</artifactId>
 
     <dependencies>
         <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpclient</artifactId>
-            <version>4.5.6</version>
+            <groupId>pri.jarod.java</groupId>
+            <artifactId>java-core</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.dataformat</groupId>
+            <artifactId>jackson-dataformat-properties</artifactId>
+            <scope>test</scope>
         </dependency>
 
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-            <version>1.2.54</version>
-        </dependency>
     </dependencies>
 
     <build>

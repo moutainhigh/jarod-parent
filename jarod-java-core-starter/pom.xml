@@ -14,8 +14,33 @@
     <version>1.0.0</version>
     <modules>
         <module>google-translater</module>
+        <module>webhook-core</module>
+        <module>java-core</module>
     </modules>
+
     <groupId>pri.jarod.java</groupId>
+
+    <distributionManagement>
+        <repository>
+            <id>rdc-releases</id>
+            <url>https://repo.rdc.aliyun.com/repository/23480-release-Cm4wtg/</url>
+        </repository>
+    </distributionManagement>
+
+    <repositories>
+        <repository>
+            <id>rdc-releases</id>
+            <url>https://repo.rdc.aliyun.com/repository/23480-release-Cm4wtg/</url>
+        </repository>
+        <repository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/libs-milestone</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 
     <dependencies>
 

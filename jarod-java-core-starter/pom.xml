@@ -10,7 +10,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>jarod-java-core-starter</artifactId>
+    <packaging>pom</packaging>
     <version>1.0.0</version>
+    <modules>
+        <module>google-translater</module>
+    </modules>
     <groupId>pri.jarod.java</groupId>
 
     <dependencies>
@@ -40,6 +44,10 @@
             <artifactId>commons-io</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+        </dependency>
         <!-- 文件上传工具类 -->
         <dependency>
             <groupId>commons-fileupload</groupId>
@@ -52,6 +60,11 @@
             <artifactId>poi-ooxml</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>29.0-jre</version>
+        </dependency>
         <!-- yml解析器 -->
         <dependency>
             <groupId>org.yaml</groupId>
@@ -61,6 +74,12 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>pri.jarod</groupId>
+            <artifactId>google-translater</artifactId>
+            <version>1.0.1</version>
         </dependency>
 
     </dependencies>

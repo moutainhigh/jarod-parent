@@ -114,8 +114,8 @@ under the License.
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.19</version>
-            <scope>test</scope>
+            <version>5.1.47</version>
+            <!--            <scope>test</scope>-->
         </dependency>
 
         <dependency>
@@ -132,9 +132,18 @@ under the License.
             <scope>${dep.flink.jar}</scope>
         </dependency>
 
+        <!--        old planner-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.apache.flink</groupId>-->
+        <!--            <artifactId>flink-table-planner_${scala.binary.version}</artifactId>-->
+        <!--            <version>${flink.version}</version>-->
+        <!--            <scope>${dep.flink.jar}</scope>-->
+        <!--        </dependency>-->
+
+        <!--        the new Blink planner-->
         <dependency>
             <groupId>org.apache.flink</groupId>
-            <artifactId>flink-table-planner_${scala.binary.version}</artifactId>
+            <artifactId>flink-table-planner-blink_${scala.binary.version}</artifactId>
             <version>${flink.version}</version>
             <scope>${dep.flink.jar}</scope>
         </dependency>
@@ -145,6 +154,28 @@ under the License.
             <version>${flink.version}</version>
             <scope>${dep.flink.jar}</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-table-common</artifactId>
+            <version>${flink.version}</version>
+            <scope>${dep.flink.jar}</scope>
+        </dependency>
+
+        <!--        <dependency>-->
+        <!--            <groupId>org.apache.flink</groupId>-->
+        <!--            <artifactId>flink-connectors</artifactId>-->
+        <!--            <version>${flink.version}</version>-->
+        <!--            <scope>${dep.flink.jar}</scope>-->
+        <!--        </dependency>-->
+
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-connector-jdbc_${scala.binary.version}</artifactId>
+            <version>${flink.version}</version>
+            <scope>${dep.flink.jar}</scope>
+        </dependency>
+
         <!-- Add connector dependencies here. They must be in the default scope (compile). -->
 
         <dependency>
@@ -166,6 +197,17 @@ under the License.
             <artifactId>log4j</artifactId>
             <version>1.2.17</version>
             <scope>runtime</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.1.20</version>
         </dependency>
     </dependencies>
 

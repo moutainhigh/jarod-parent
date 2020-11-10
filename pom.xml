@@ -35,13 +35,14 @@
         <arthas.version>3.3.6</arthas.version>
         <poi.version>4.1.2</poi.version>
         <fastjson.version>1.2.57</fastjson.version>
-        <guava.version>24.1.1</guava.version>
+        <guava.version>29.0-jre</guava.version>
     </properties>
 
     <modules>
         <module>jarod-spring-boot-starter</module>
         <module>jarod-bigdata-starter</module>
         <module>jarod-java-core-starter</module>
+        <module>jarod-debezium-core</module>
     </modules>
 
     <dependencies>
@@ -50,6 +51,11 @@
     <!-- 依赖声明 -->
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>5.4.0</version>
+            </dependency>
             <dependency>
                 <groupId>com.taobao.arthas</groupId>
                 <artifactId>arthas-spring-boot-starter</artifactId>
@@ -163,6 +169,12 @@
                 <version>${commons.io.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>commons-beanutils</groupId>
+                <artifactId>commons-beanutils</artifactId>
+                <version>1.9.4</version>
+            </dependency>
+
             <!--文件上传工具类 -->
             <dependency>
                 <groupId>commons-fileupload</groupId>
@@ -173,7 +185,7 @@
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
-                <version>${guava.version}</version>
+                <version>29.0-jre</version>
             </dependency>
 
             <!-- excel工具 -->
@@ -247,63 +259,54 @@
 
     <distributionManagement>
         <repository>
-            <id>releases</id>
-            <name>Nexus Releases</name>
-            <url>http://192.168.236.7:8081/nexus/content/repositories/releases/</url>
+            <id>rdc-releases</id>
+            <url>https://repo.rdc.aliyun.com/repository/23480-release-Cm4wtg/</url>
         </repository>
-        <snapshotRepository>
-            <id>snapshots</id>
-            <name>Nexus Snapshots</name>
-            <url>http://192.168.236.7:8081/nexus/content/repositories/snapshots/</url>
-        </snapshotRepository>
+<!--        <repository>-->
+<!--            <id>releases</id>-->
+<!--            <name>Nexus Releases</name>-->
+<!--            <url>http://192.168.236.7:8081/nexus/content/repositories/releases/</url>-->
+<!--        </repository>-->
+<!--        <snapshotRepository>-->
+<!--            <id>snapshots</id>-->
+<!--            <name>Nexus Snapshots</name>-->
+<!--            <url>http://192.168.236.7:8081/nexus/content/repositories/snapshots/</url>-->
+<!--        </snapshotRepository>-->
     </distributionManagement>
 
     <repositories>
         <repository>
-            <id>bluemoon-nexus</id>
-            <name>nexus</name>
-            <url>http://192.168.236.7:8081/nexus/content/groups/public/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
+            <id>rdc-releases</id>
+            <url>https://repo.rdc.aliyun.com/repository/23480-release-Cm4wtg/</url>
         </repository>
         <repository>
-            <id>public</id>
-            <name>aliyun nexus</name>
-            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-        </repository>
-    </repositories>
-
-    <pluginRepositories>
-        <pluginRepository>
-            <id>bluemoon-nexus</id>
-            <name>nexus</name>
-            <url>http://192.168.236.7:8081/nexus/content/groups/public/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </pluginRepository>
-        <pluginRepository>
-            <id>public</id>
-            <name>aliyun nexus</name>
-            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/libs-milestone</url>
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
-        </pluginRepository>
-    </pluginRepositories>
+        </repository>
+<!--        <repository>-->
+<!--            <id>bluemoon-nexus</id>-->
+<!--            <name>nexus</name>-->
+<!--            <url>http://192.168.236.7:8081/nexus/content/groups/public/</url>-->
+<!--            <releases>-->
+<!--                <enabled>true</enabled>-->
+<!--            </releases>-->
+<!--            <snapshots>-->
+<!--                <enabled>true</enabled>-->
+<!--            </snapshots>-->
+<!--        </repository>-->
+<!--        <repository>-->
+<!--            <id>public</id>-->
+<!--            <name>aliyun nexus</name>-->
+<!--            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>-->
+<!--            <releases>-->
+<!--                <enabled>true</enabled>-->
+<!--            </releases>-->
+<!--        </repository>-->
+    </repositories>
 
     <build>
         <plugins>
